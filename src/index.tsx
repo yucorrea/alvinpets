@@ -1,7 +1,18 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
+import {StatusBar} from 'react-native';
+import {Provider} from 'react-redux';
 
-import {InitialScreen} from './modules/initial/presentation/screens/InitialScreen';
+import {Routes} from './navigation';
+import Store from './store';
 
 export default function App() {
-  return <InitialScreen />;
+  return (
+    <Provider store={Store}>
+      <StatusBar />
+      <NavigationContainer>
+        <Routes />
+      </NavigationContainer>
+    </Provider>
+  );
 }

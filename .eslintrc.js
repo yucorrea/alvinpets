@@ -7,4 +7,13 @@ module.exports = {
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
   },
+  settings: {
+    'import/resolver': {
+      typescript: {},
+      'babel-plugin-root-import': {
+        rootPathPrefix: '~',
+        rootPathSuffix: 'src',
+      },
+    },
+  },
 };

@@ -4,7 +4,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {InitialScreen} from '../modules/initial/presentation/screens/InitialScreen';
 import {DashboardScreen} from '../modules/dashboard/presentation/screens/DashboardScreen';
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  Initial: null;
+  Dashboard: null;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export function Routes() {
   return (
